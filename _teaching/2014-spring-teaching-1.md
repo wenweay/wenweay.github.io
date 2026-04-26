@@ -1,15 +1,13 @@
-### **United Nations Volunteer (FAO)**
-*Regional Office for Latin America and the Caribbean, Peru* | *202X.XX – 202X.XX*
+### **Food and Agriculture Organization of the United Nations (FAO)**
+*Lima, Peru* | *2024.09 – 2025.03*
 
-* **核心职责**：负责粮食与农业相关的[具体任务]，在跨文化环境下与[某部门]协调。
-* **成果贡献**：利用数据分析/项目管理工具提升了[某项指标] 15%。
-* **技术/技能**：跨部门协作、多语言沟通（西班牙语/英语）、数据可视化。
+Contributed to the implementation of the Smart Biosecurity Aquaculture project, supporting sustainable and resilient aquaculture development in vulnerable regions of northern Peru. Supported technical tasks including data analysis, sensor selection and integration, control system design, and development of AI-based solutions for aquaculture monitoring and optimization.
 
 ---
 
-### **Research Assistant / Project Lead**
-*Politecnico di Milano* | *2025.10 – 至今*
+### **Research Assistant**
+*Southern University of Science and Technology (SUSTech)* | *2022.01 – 2023.06*
 
-* **项目名称**：基于深度学习的超声图像分割（U-Net）。
-* **核心任务**：使用 Python/PyTorch 开发了 ROI 自动提取算法，优化了乳腺癌超声影像的分类流程。
-* **技术栈**：Python, PyTorch, Biomedical Signal Processing.
+* **Project**：Hybrid Brain-Computer Interface using Motor Imagery and SSVEP
+* **Description**：This project is my individual project and is completed in NCCLab. Motor imagery (MI) has the disadvantages of unsatisfactory decoding accuracy and a low degree of freedom. SSVEP requires subjects to stare at the monitor for a long time, and the flickering stimuli can easily cause visual fatigue. A more efficient and comfortable brain-computer interface (BCI) technology. Therefore, We proposed a hybrid BCI algorithm based on deep learning, which combines MI and SSVEP. The proposed model can not only decode MI or SSVEP single-paradigm inputs, but also decode SSVEP and MI multi-paradigm inputs.
+* **Skills**：Python, Tenshorflow, EEG Processing.
