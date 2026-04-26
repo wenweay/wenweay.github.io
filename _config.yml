@@ -7,14 +7,18 @@
 # server process.
 
 # Basic Site Settings
+# 基础信息
 locale                   : "en-US"
 title                    : "Wenwei Luo"
 title_separator          : "-"
 name                     : &name "Wenwei Luo"
-description              : &description "personal description"
-url                      : https://wenweay.github.io/wenwei.github.io/ # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "wenweay/wenwei.github.io"
+description              : &description "Biomedical Engineering Student @ Polimi" # 建议加个一句话简介
+
+# 关键路径设置
+url                      : "https://wenweay.github.io" # 不要加末尾的斜杠，也不要加仓库名
+baseurl                  : "" # 保持为空，这样你的资源文件才会从根目录加载
+repository               : "wenweay/wenweay.github.io" # 记得把这里的 i 改成 ay
+
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
