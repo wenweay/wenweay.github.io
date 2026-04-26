@@ -1,3 +1,10 @@
+---
+title: "Work Experience"
+layout: single
+permalink: /experiences/
+author_profile: true
+---
+
 ### **Food and Agriculture Organization of the United Nations (FAO)**
 *Lima, Peru* | *2024.09 – 2025.03*
 
