@@ -16,8 +16,8 @@ description              : &description "Biomedical Engineering Student @ Polimi
 
 # 关键路径设置
 url                      : "https://wenweay.github.io" # 不要加末尾的斜杠，也不要加仓库名
-baseurl                  : "" # 保持为空，这样你的资源文件才会从根目录加载
-repository               : "wenweay/wenweay.github.io" # 记得把这里的 i 改成 ay
+baseurl                  : "/SelfIntro" # 仓库名不是 wenweay.github.io 时必须填 "/仓库名"；若把仓库改名为 wenweay.github.io，这里改回 ""
+repository               : "wenweay/SelfIntro" # 与实际仓库名保持一致
 
 
 # Site Author - The following control what appear as part of the author content on the side bar.
