@@ -1,20 +1,38 @@
 ---
-title: "Work Experience"
+title: "Experiences"
 layout: single
 permalink: /experiences/
 author_profile: true
 ---
 
 ### **Food and Agriculture Organization of the United Nations (FAO)**
-*Lima, Peru* | *2024.09 – 2025.03*
+**Operations Trainee** (UN Volunteers Fully Funded Programme)<br>
+*Lima, Peru* | *Sep. 2024 – Mar. 2025*
 
-Contributed to the implementation of the Smart Biosecurity Aquaculture project, supporting sustainable and resilient aquaculture development in vulnerable regions of northern Peru. Supported technical tasks including data analysis, sensor selection and integration, control system design, and development of AI-based solutions for aquaculture monitoring and optimization.
+* Contributed to the implementation of the **Smart Biosecurity Aquaculture** project, supporting sustainable and resilient aquaculture development in vulnerable regions of northern Peru.
+* Supported technical tasks including data analysis, sensor selection and integration, control system design, and development of AI-based solutions for aquaculture monitoring and optimization.
+* Delivered two internal AI training sessions to strengthen digital capacity, covering the fundamentals of neural networks, large language models, and practical applications for workplace efficiency.
+* Collaborated with cross-functional teams, including the Communications Unit, providing visual documentation for official events and outreach activities.
 
 ---
 
-### **Research Assistant**
-*Southern University of Science and Technology (SUSTech)* | *2022.01 – 2023.06*
+### **Master's Thesis, Politecnico di Milano**
+**Cross-Condition Self-Supervised Learning for Imagined-Speech EEG Decoding**<br>
+*Milan, Italy* | *Ongoing*
 
-* **Project**: Hybrid Brain-Computer Interface using Motor Imagery and SSVEP
-* **Description**: This project is my individual project and is completed in NCCLab. Motor imagery (MI) has the disadvantages of unsatisfactory decoding accuracy and a low degree of freedom. SSVEP requires subjects to stare at the monitor for a long time, and the flickering stimuli can easily cause visual fatigue. Therefore, We proposed a hybrid BCI algorithm based on deep learning, which combines MI and SSVEP. The proposed model can not only decode MI or SSVEP single-paradigm inputs, but also decode SSVEP and MI multi-paradigm inputs.
-* **Skills**: Python, TensorFlow, EEG Processing.
+* Developing **RI-JEPA**, a self-supervised Joint-Embedding Predictive Architecture that uses naturally paired reading-phase and imagined-phase EEG of the same sentence as a privileged cross-condition training signal for decoding Chinese imagined speech from non-invasive EEG.
+* Designing an EEG encoder with learnable spatial filtering and multi-band temporal convolutions, pretrained by latent-space prediction with EMA teacher–student training and representation-collapse monitoring.
+* Building a controlled evaluation framework on the 5-subject Chisco dataset (OpenNeuro ds005170): comparisons against MAE, contrastive, and single-modality JEPA baselines, shuffled-pair causal controls, data-scaling analysis, and subject-level statistical testing.
+* Targeting sentence-level decoding through closed-set retrieval and unseen-sentence generation, with leakage-safe sentence-level data splits.
+
+---
+
+### **Neural Computing and Control Laboratory (NCCLab), SUSTech**
+**Research Assistant**, supervised by Dr. Quanying Liu<br>
+*Shenzhen, China* | *Jan. 2022 – Jun. 2023*
+
+* **Project**: MI and SSVEP based hybrid brain-computer interface (individual project, Mar. 2022 – Oct. 2022).
+* Motor imagery (MI) suffers from limited decoding accuracy and few degrees of freedom, while SSVEP requires long fixation on flickering stimuli that cause visual fatigue. We proposed a deep-learning hybrid BCI that combines the two and can decode MI-only, SSVEP-only, and hybrid inputs.
+* **Method**: a two-stream convolutional network, with one stream for MI and one for SSVEP.
+* **Results**: classification accuracy of 96% (hybrid), 94% (SSVEP), and 70% (MI). Published in *Brain-Apparatus Communication: A Journal of Bacomics* (2023).
+* **Skills**: Python, TensorFlow, EEG processing.
