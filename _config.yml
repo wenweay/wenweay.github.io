@@ -25,7 +25,7 @@ repository               : "wenweay/wenweay.github.io" # 与实际仓库名保�
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "ava.png"
+  avatar           : "avatar.jpg"
   name             : "Wenwei Luo"
   pronouns         : # example: "she/her"  
   bio              : "MSc Biomedical Engineering @ Polimi. Brain-computer interfaces & machine learning for EEG."
