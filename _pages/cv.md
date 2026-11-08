@@ -46,6 +46,7 @@ Selected course projects
 ======
 * **Robust Medical Image Diagnosis via Weighted Masking and Cascaded Architectures** (2025): UNet segmentation cascaded with fine-tuned pretrained vision backbones; comparison of hard, cropped, and weighted ROI masking
 * **Deep Learning-Based Segmentation of Type B Aortic Dissection** (2025): enhanced U-Net with a pretrained ResNet50 encoder and compound weighted cross-entropy + Dice loss
+* **Predicting Heart Failure Readmission: An End-to-End Statistical Learning Pipeline** (2025–2026): leakage-safe ML pipeline for 6-month readmission prediction on 2,008 heart failure patients, with model comparison and an algorithmic fairness analysis
 * **Generalization Assessment of PPG-Based Blood Pressure Estimation** (2025): reproduced a cross-population PPG blood-pressure method on MIMIC-BP (1,524 patients) and showed its limited generalization under domain shift
 * **Technologies for Sensors and Clinical Instrumentation** (Mar. 2024 – Jun. 2024): estimated anterior-posterior and medial-lateral ground reaction force from force-sensitive resistors and video-based gait analysis with a deep neural network
 
