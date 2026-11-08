@@ -1,6 +1,6 @@
 ---
 title: "A Hybrid Brain-Computer Interface Using Motor Imagery and SSVEP"
-excerpt: "Individual project at NCCLab, SUSTech (2022). A two-stream CNN that decodes MI, SSVEP, and hybrid inputs; published in Brain-Apparatus Communication.<br/><img src='/images/TSCNN.png' style='width: 50%; height: auto;'>"
+excerpt: "Individual project at NCCLab, SUSTech (2022). A two-stream CNN that decodes MI, SSVEP, and hybrid inputs; published in Brain-Apparatus Communication.<br/><img src='/images/TSCNN.png' style='width: 60%; height: auto;'>"
 collection: portfolio
 ---
 
