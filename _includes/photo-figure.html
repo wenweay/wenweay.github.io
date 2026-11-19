@@ -1,0 +1,11 @@
+{% assign p = include.photo %}{% assign ratio = p.width | times: 1.0 | divided_by: p.height %}
+<figure class="photo{% if include.hero %} photo--hero{% endif %}" style="flex-grow: {{ ratio | round: 4 }};">
+  <button class="photo__open" type="button" data-full="{{ base_path }}/images/photography/{{ include.slug }}-2400.jpg" data-caption="{{ p.caption | escape }}" data-color="{{ p.color }}" aria-label="View larger: {{ p.caption | escape }}">
+    <img src="{{ base_path }}/images/photography/{{ include.slug }}-1200.jpg"
+         srcset="{{ base_path }}/images/photography/{{ include.slug }}-1200.jpg 1200w, {{ base_path }}/images/photography/{{ include.slug }}-2400.jpg 2400w"
+         sizes="{% if include.hero %}(max-width: 1200px) 100vw, 1200px{% else %}(max-width: 640px) 100vw, 60vw{% endif %}"
+         width="{{ p.width }}" height="{{ p.height }}" alt="{{ p.alt | escape }}"
+         {% unless include.hero %}loading="lazy" {% endunless %}decoding="async" style="background-color: {{ p.color }};">
+  </button>
+  <figcaption>{{ p.caption }}</figcaption>
+</figure>

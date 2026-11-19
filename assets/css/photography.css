@@ -1,0 +1,262 @@
+/* Photography page: a quiet photo book. Rows of photos share one height and
+   keep their original proportions, so nothing is cropped. */
+
+.photo-main {
+  --ink: #23262a;
+  --muted: #6c7177;
+  --gap: 10px;
+  --serif: "EB Garamond", Garamond, Georgia, serif;
+}
+
+.photo-page {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding-bottom: 5rem;
+}
+
+/* Header */
+.photo-head {
+  margin: 1.5rem 0 2.75rem;
+}
+
+.photo-title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(2.6rem, 6vw, 4.25rem);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin: 0 0 1.1rem;
+}
+
+.photo-intro {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  line-height: 1.55;
+  color: var(--muted);
+  max-width: 34em;
+  margin: 0;
+}
+
+/* Sections */
+.photo-section {
+  margin-top: 5.5rem;
+}
+
+.photo-section__title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 1.1;
+  color: var(--ink);
+  margin: 0 0 1.5rem;
+  border: 0;
+  padding: 0;
+}
+
+/* Rows: each figure grows in proportion to its aspect ratio, so all photos
+   in a row end up exactly the same height. */
+.photo-row {
+  display: flex;
+  gap: var(--gap);
+  align-items: flex-start;
+  margin-bottom: 1.6rem;
+}
+
+.photo {
+  display: block;
+  flex-basis: 0;
+  min-width: 0;
+  margin: 0;
+  transition: none;
+}
+
+.photo__open {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: none;
+  cursor: zoom-in;
+  line-height: 0;
+}
+
+.photo__open:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 4px;
+}
+
+.photo img,
+.lightbox__img {
+  margin: 0;
+  border-radius: 0;
+  transition: none;
+}
+
+.photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.photo figcaption {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.3;
+  color: var(--muted);
+  margin-top: 0.55rem;
+  padding: 0;
+  text-align: left;
+}
+
+.photo-row--hero {
+  margin-bottom: 0;
+}
+
+.photo--hero figcaption {
+  font-size: 1.05rem;
+}
+
+@media (max-width: 640px) {
+  .photo-row {
+    flex-direction: column;
+    gap: 1.4rem;
+  }
+  .photo {
+    flex-basis: auto;
+    width: 100%;
+  }
+  .photo-section {
+    margin-top: 4rem;
+  }
+}
+
+/* Viewer */
+body.lightbox-open {
+  overflow: hidden;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.lightbox[hidden] {
+  display: none;
+}
+
+.lightbox.is-open {
+  opacity: 1;
+}
+
+.lightbox__figure {
+  margin: 0;
+  transition: none;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: calc(100vw - 160px);
+}
+
+.lightbox .lightbox__img {
+  display: block;
+  max-width: calc(100vw - 160px);
+  max-height: calc(100vh - 110px);
+  width: auto;
+  height: auto;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.lightbox .lightbox__img.is-loaded {
+  opacity: 1;
+}
+
+.lightbox__meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 100%;
+  margin-top: 0.9rem;
+  font-family: "EB Garamond", Garamond, Georgia, serif;
+  color: #c9c9c9;
+}
+
+.lightbox__caption {
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+.lightbox__count {
+  font-size: 0.95rem;
+  color: #8a8a8a;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.lightbox__btn {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  padding: 12px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: #d0d0d0;
+  cursor: pointer;
+}
+
+.lightbox__btn svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+}
+
+.lightbox__btn:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.lightbox__btn:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.lightbox__close { top: 16px; right: 16px; }
+.lightbox__prev { left: 16px; top: 50%; transform: translateY(-50%); }
+.lightbox__next { right: 16px; top: 50%; transform: translateY(-50%); }
+
+@media (max-width: 640px) {
+  .lightbox__figure,
+  .lightbox .lightbox__img {
+    max-width: 100vw;
+  }
+  .lightbox__meta {
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+  .lightbox__prev,
+  .lightbox__next {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lightbox,
+  .lightbox .lightbox__img {
+    transition: none;
+  }
+}

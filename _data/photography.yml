@@ -1,0 +1,104 @@
+# Photography page content.
+# To add a photo: put <slug>-1200.jpg and <slug>-2400.jpg in images/photography/,
+# add an entry under `photos` (width/height of the 2400 version), then place the
+# slug in a row. Photos in the same row are shown at the same height.
+intro: Photography is what I do away from the lab. These are landscapes from places I have lived in and travelled through, from the Dolomites to the Peruvian Andes.
+hero: tre-cime
+sections:
+- title: Italy
+  rows:
+  - - cadini
+    - vernazza
+  - - naples
+    - cinque-terre
+  - - florence-dusk
+    - florence-night
+- title: Peru
+  rows:
+  - - rainbow-1
+  - - lima
+    - arequipa
+  - - rainbow-2
+- title: Elsewhere in Europe
+  rows:
+  - - alps
+    - copenhagen
+photos:
+  tre-cime:
+    caption: Tre Cime di Lavaredo, Dolomites
+    alt: The three peaks of Tre Cime di Lavaredo silhouetted under the Milky Way
+    width: 2400
+    height: 1600
+    color: '#1d1a19'
+  cadini:
+    caption: Cadini di Misurina, Dolomites
+    alt: Jagged grey spires of the Cadini di Misurina under a summer sky
+    width: 2400
+    height: 1350
+    color: '#797c82'
+  vernazza:
+    caption: Vernazza, Cinque Terre
+    alt: The pastel houses and small harbour of Vernazza seen from above
+    width: 2400
+    height: 1303
+    color: '#75644e'
+  cinque-terre:
+    caption: Cinque Terre
+    alt: Swimmers jumping from the rocks into the sea
+    width: 1235
+    height: 1600
+    color: '#737570'
+  naples:
+    caption: Naples
+    alt: The bay of Naples and the coastline in warm evening light
+    width: 2400
+    height: 1534
+    color: '#8b7966'
+  florence-dusk:
+    caption: Florence at dusk
+    alt: The Florence skyline with the Duomo and Palazzo Vecchio at sunset
+    width: 2400
+    height: 1061
+    color: '#73604f'
+  florence-night:
+    caption: Florence at night
+    alt: Florence lit up at night, with the Duomo and Santa Croce
+    width: 2400
+    height: 999
+    color: '#2a1a0a'
+  rainbow-1:
+    caption: Rainbow Mountain, Cusco
+    alt: Red, ochre and green bands of the Rainbow Mountain range
+    width: 2400
+    height: 1232
+    color: '#947c71'
+  lima:
+    caption: Lima
+    alt: A tree leaning over the cliffs of Lima, with a paraglider above the coast
+    width: 1133
+    height: 1600
+    color: '#776b4a'
+  arequipa:
+    caption: Arequipa
+    alt: Llamas grazing on the high plain beneath a cloud-capped volcano
+    width: 2400
+    height: 1303
+    color: '#776f56'
+  rainbow-2:
+    caption: Rainbow Mountain, Cusco
+    alt: Striped mountainsides around a green valley near Rainbow Mountain
+    width: 2400
+    height: 1121
+    color: '#a1988d'
+  alps:
+    caption: Bavarian Alps, Germany
+    alt: Green meadows and farmhouses below forested mountains in the Bavarian Alps
+    width: 2400
+    height: 1331
+    color: '#5d5823'
+  copenhagen:
+    caption: Copenhagen, Denmark
+    alt: Deer grazing in front of autumn trees near Copenhagen
+    width: 2400
+    height: 1043
+    color: '#463819'

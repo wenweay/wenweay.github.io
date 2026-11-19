@@ -1,0 +1,64 @@
+---
+layout: default
+---
+
+{% include base_path %}
+{% assign d = site.data.photography %}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap">
+<link rel="stylesheet" href="{{ base_path }}/assets/css/photography.css">
+
+<div id="main" role="main" class="photo-main">
+  <article class="photo-page">
+    <header class="photo-head">
+      <h1 class="photo-title">{{ page.title }}</h1>
+      {% if d.intro %}<p class="photo-intro">{{ d.intro }}</p>{% endif %}
+    </header>
+
+    {% if d.hero %}
+    <div class="photo-row photo-row--hero">
+      {% assign hero_photo = d.photos[d.hero] %}
+      {% include photo-figure.html slug=d.hero photo=hero_photo hero="1" %}
+    </div>
+    {% endif %}
+
+    {% for s in d.sections %}
+    <section class="photo-section" aria-labelledby="photo-section-{{ forloop.index }}">
+      <h2 class="photo-section__title" id="photo-section-{{ forloop.index }}">{{ s.title }}</h2>
+      {% for row in s.rows %}
+      <div class="photo-row">
+        {% for slug in row %}
+          {% assign row_photo = d.photos[slug] %}
+          {% include photo-figure.html slug=slug photo=row_photo %}
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </section>
+    {% endfor %}
+
+    {{ content }}
+  </article>
+</div>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+  <button class="lightbox__btn lightbox__close" type="button" aria-label="Close viewer">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+  </button>
+  <button class="lightbox__btn lightbox__prev" type="button" aria-label="Previous photo">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4l-8 8 8 8"/></svg>
+  </button>
+  <figure class="lightbox__figure">
+    <img class="lightbox__img" alt="">
+    <figcaption class="lightbox__meta">
+      <span class="lightbox__caption"></span>
+      <span class="lightbox__count"></span>
+    </figcaption>
+  </figure>
+  <button class="lightbox__btn lightbox__next" type="button" aria-label="Next photo">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4l8 8-8 8"/></svg>
+  </button>
+</div>
+
+<script src="{{ base_path }}/assets/js/photography.js" defer></script>
