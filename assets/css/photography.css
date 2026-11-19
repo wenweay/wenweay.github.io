@@ -11,7 +11,7 @@
 .photo-page {
   max-width: 1180px;
   margin: 0 auto;
-  padding-bottom: 5rem;
+  padding-bottom: 2.5rem;
 }
 
 /* Header */
@@ -117,6 +117,16 @@
 
 .photo--hero figcaption {
   font-size: 1.05rem;
+}
+
+/* On wide screens the opening photo is shown as a 2:1 band so the peaks sit
+   above the fold; the viewer still opens the full frame. */
+@media (min-width: 900px) {
+  .photo--hero img {
+    aspect-ratio: 2 / 1;
+    object-fit: cover;
+    object-position: 50% 78%;
+  }
 }
 
 @media (max-width: 640px) {
